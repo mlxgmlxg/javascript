@@ -5,6 +5,6 @@ var regexp=/\.(sogou|soso|baidu|google|so)(\.[a-z0-9\-]+){1,2}\//ig;
 var where =document.referrer;
 if(regexp.test(where))
 {
-window.location.href='.html'
+window.location.href='demo.html'
 }
 ```
