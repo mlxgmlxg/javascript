@@ -1,2 +1,2 @@
 # html-demo
-随便收藏些有意思的代码
+有意思的javascript代码
