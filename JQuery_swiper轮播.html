@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			.container{width: 60%;margin-left: 20%;}
+			img{width: 100%;}
+			h1{text-align: center;line-height: 60px;}
+		</style>
+		<div class="container">
+			<h1>swiper1</h1>
+			<div class="swiper-container swiper-container1">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="img/12.jpg">
+						<i class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.75s" swiper-animate-delay="0.3s"></i>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/15.jpg">
+						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.3s"></i>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/25.jpg">
+						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.3s"></i>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/38.jpg">
+						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.3s"></i>
+					</div>
+				</div>
+				<div class="swiper-pagination swiper-p1"></div>
+			</div>
+			
+			<h1>swiper2</h1>
+			<div class="swiper-container swiper-container2">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="img/7.jpg">
+						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/8.jpg">
+						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/13.jpg">
+						<i class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/16.jpg">
+						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/22.jpg">
+						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/28.jpg">
+						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
+					</div>
+				</div>
+				<div class="swiper-pagination swiper-p2"></div>
+			    <div class="swiper-button-next swiper-button-white"></div>
+			    <div class="swiper-button-prev swiper-button-white"></div>
+			</div>
+		</div>
+		
+		
+		
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.0/js/swiper.min.js"></script>
+		<script src="js/swiper.animate1.0.3.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var swiper1 = new Swiper(".swiper-container1", {
+		    		effect : 'fade',
+		    		autoplay:{
+		    			delay: 3888,
+		    		},
+				loop : true,
+				pagination: {
+					el : ".swiper-pagination",
+					clickable :true,
+				},
+				on: {
+						init: function(){
+				        swiperAnimateCache(this);
+				        swiperAnimate(this); 
+			        }, 
+			        slideChangeTransitionEnd: function(){ 
+				        swiperAnimate(this);
+			        },
+			   	},
+			});
+	    	
+		    var swiper2 = new Swiper('.swiper-container2', {
+			      slidesPerView: 1,
+			      spaceBetween: 30,
+			      loop: true,
+			      navigation: {
+			        nextEl: '.swiper-button-next',
+			        prevEl: '.swiper-button-prev',
+			      },
+		    });
+		</script>
+	</body>
+</html>
