@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+			.marquee{
+				width: 80%;
+				height: 60px;
+				line-height: 60px;
+				margin-left: 10%;
+				margin-top: 10%;
+				background: aqua;
+			}
+			#marquee{
+				width: 100%;
+				overflow: hidden;
+				color: #fff;
+				font-size: 28px;
+			}
+		</style>
+		<div class="marquee">
+			<p id="marquee">
+				人生没有绝对的公平，而是相对公平。在一个天平上，你得到越多，势必要承受更多，每一个看似低的起点，都是通往更高峰的必经之路。早安！
+			</p>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.js"></script>
+		<script type="text/javascript">
+			$("#marquee").marquee({
+	            yScroll: "bottom",
+	            duration: 20000,
+	            showSpeed: 450,  // Initial drop speed   ,
+	            scrollSpeed: 11,  // Rolling speed   ,
+	            pauseSpeed: 500,  // To scroll to the next interval.   ,
+	            pauseOnHover: true, // Whether the mouse to stop scrolling text   ,
+	            fxEasingShow: "swing", // Buffer effect   ,
+	            fxEasingScroll: "linear", // Buffer effect   ,
+	            cssShowing: "marquee-showing", //Definitionclass
+	            duplicated: true,
+	            gap: 100,
+	        });
+
+		</script>
+	</body>
+</html>
