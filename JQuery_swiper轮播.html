@@ -18,19 +18,19 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<img src="img/12.jpg">
-						<i class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.75s" swiper-animate-delay="0.3s"></i>
+						<i swiper-animate-effect="bounceIn" swiper-animate-duration="0.75s" swiper-animate-delay="0.3s"></i>
 					</div>
 					<div class="swiper-slide">
 						<img src="img/15.jpg">
-						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.3s"></i>
+						<i swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.3s"></i>
 					</div>
 					<div class="swiper-slide">
 						<img src="img/25.jpg">
-						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.3s"></i>
+						<i swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.3s"></i>
 					</div>
 					<div class="swiper-slide">
 						<img src="img/38.jpg">
-						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.3s"></i>
+						<i swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.3s"></i>
 					</div>
 				</div>
 				<div class="swiper-pagination swiper-p1"></div>
@@ -41,27 +41,27 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<img src="img/7.jpg">
-						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
+						<i swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
 					</div>
 					<div class="swiper-slide">
 						<img src="img/8.jpg">
-						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
+						<i swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
 					</div>
 					<div class="swiper-slide">
 						<img src="img/13.jpg">
-						<i class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
+						<i swiper-animate-effect="bounceIn" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
 					</div>
 					<div class="swiper-slide">
 						<img src="img/16.jpg">
-						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
+						<i swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
 					</div>
 					<div class="swiper-slide">
 						<img src="img/22.jpg">
-						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
+						<i swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
 					</div>
 					<div class="swiper-slide">
 						<img src="img/28.jpg">
-						<i class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
+						<i swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.75s" swiper-animate-delay="0.6s"></i>
 					</div>
 				</div>
 				<div class="swiper-pagination swiper-p2"></div>
@@ -86,27 +86,33 @@
 				pagination: {
 					el : ".swiper-pagination",
 					clickable :true,
-				},
-				on: {
-						init: function(){
-				        swiperAnimateCache(this);
-				        swiperAnimate(this); 
-			        }, 
-			        slideChangeTransitionEnd: function(){ 
-				        swiperAnimate(this);
-			        },
-			   	},
+				}
 			});
+			swiper1.el.onmouseover = function(){
+			  swiper1.autoplay.stop();
+			}
+			swiper1.el.onmouseleave = function(){
+			  swiper1.autoplay.start();
+			}
 	    	
 		    var swiper2 = new Swiper('.swiper-container2', {
-			      slidesPerView: 1,
-			      spaceBetween: 30,
-			      loop: true,
-			      navigation: {
-			        nextEl: '.swiper-button-next',
-			        prevEl: '.swiper-button-prev',
-			      },
+		    		autoplay:{
+		    			delay: 3888,
+		    		},
+			    slidesPerView: 1,
+			    spaceBetween: 30,
+			    loop: true,
+			    navigation: {
+			    nextEl: '.swiper-button-next',
+			       prevEl: '.swiper-button-prev',
+			    },
 		    });
+			swiper2.el.onmouseover = function(){
+			  swiper2.autoplay.stop();
+			}
+			swiper2.el.onmouseleave = function(){
+			  swiper2.autoplay.start();
+			}
 		</script>
 	</body>
 </html>
