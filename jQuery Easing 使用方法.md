@@ -42,10 +42,10 @@ easeInOutBounce
 				
 	jQuery.extend( jQuery.easing,               //选择easing参数，可选的值有32种
 	{  
-	    easeOutExpo: function (x, t, b, c, d) {  
+	    easeOutExpo: function (x, t, b, c, d) {  //easeOutExpo
 		return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;  
 	    },  
-	    easeOutBounce: function (x, t, b, c, d) {  
+	    easeOutBounce: function (x, t, b, c, d) {  //easeOutBounce
 		if ((t/=d) < (1/2.75)) {  
 		    return c*(7.5625*t*t) + b;  
 		} else if (t < (2/2.75)) {  
@@ -57,7 +57,7 @@ easeInOutBounce
 		}  
 	    },  
 	}); 
-        $(function () {                          //执行
+        $(function () {                          //执行 滑行到top500px的地方
             $(myElement).animate({  
 		    top: 500,  
 		    opacity: 1  
@@ -66,4 +66,14 @@ easeInOutBounce
 			
 })(jQuery);
 
+```
+使用jQuery内置动画函数如slideUp()、slideDown()等来指定easing效果，以下两种方法都可以：
+
+```javascript
+$(myElement).slideUp(1000, method, callback});  
+$(myElement).slideUp({  
+    duration: 1000,   
+    easing: method,   
+    complete: callback  
+});
 ```
