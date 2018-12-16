@@ -1,3 +1,5 @@
+##jquery easing是jq一款可以自定义动画的函数，animate( properties [, duration] [, easing] [, complete] )有四个参数
+
 ```javascript
 (function ($) {
 				
