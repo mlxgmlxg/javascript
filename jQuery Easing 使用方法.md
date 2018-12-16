@@ -1,4 +1,41 @@
-#### jquery easing是jq一款可以自定义动画的函数，animate( properties [, duration] [, easing] [, complete] )有四个参数
+#### `jquery easing`是jq一款可以自定义动画的函数，animate( properties [, duration] [, easing] [, complete] )有四个参数
+
+使用需要引入jquery,jquery.easing.js
+
+### 32种easing效果
+
+linear
+swing
+easeInQuad
+easeOutQuad
+easeInOutQuad
+easeInCubic
+easeOutCubic
+easeInOutCubic
+easeInQuart
+easeOutQuart
+easeInOutQuart
+easeInQuint
+easeOutQuint
+easeInOutQuint
+easeInExpo
+easeOutExpo
+easeInOutExpo
+easeInSine
+easeOutSine
+easeInOutSine
+easeInCirc
+easeOutCirc
+easeInOutCirc
+easeInElastic
+easeOutElastic
+easeInOutElastic
+easeInBack
+easeOutBack
+easeInOutBack
+easeInBounce
+easeOutBounce
+easeInOutBounce
 
 ```javascript
 (function ($) {
