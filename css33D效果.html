@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+			.main {
+				width: 500px;
+				height: 300px;
+				line-height: 300px;
+				text-align: center;
+				text-shadow: 0 0 2px #0000FF;
+				margin: 100px auto 0;
+				transition: .7s;
+				transform-style: preserve-3d;
+				transform: translateZ(-150px);
+				position: relative;
+				font-size: 58px;
+				font-weight: bold;
+			}
+			.box {
+				height: inherit;
+				position: absolute;
+				width: inherit;
+			}
+			.box1 {
+				background: yellow;
+				color: red;
+				transform: translateZ(150px);
+			}
+			.box2 {
+				background: blue;
+				color: #fff;
+				transform: rotateX(-90deg) translateZ(150px);
+			}
+			.main:hover {
+				transform: perspective(1000px) translateZ(150px) rotateX(90deg);
+			}
+		</style>
+		<div class="main">
+			<div class="box box1">
+				啦啦啦啦啦啦啦
+			</div>
+			<div class="box box2">
+				嘿嘿嘿呦嘿嘿呦
+			</div>
+		</div>
+	</body>
+</html>
