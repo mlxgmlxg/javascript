@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+			ul {
+				display: block;
+				float: left;
+				margin-left: 200px;
+				position: relative;
+			}
+			ul li {
+				float: left;
+				display: block;
+				list-style: none;
+				width: 180px;
+				height: 80px;
+			}
+			ul li a {
+				color: #333;
+				width: 100%;
+				font-size: 38px;
+				text-decoration: none;
+				background: orange;
+				line-height: 80px;
+				text-align: center;
+				display: block;
+			}
+			#underline {
+				width: 180px;
+				height: 4px;
+				background: #0000FF;
+				position: absolute;
+				bottom: 0;
+				left: 40px;
+				transition: all .3s;
+			}
+		</style>
+		<ul id="nav">
+			<li><a href="#">王朝</a></li>
+			<li><a href="#">马汉</a></li>
+			<li><a href="#">张龙</a></li>
+			<li><a href="#">赵虎</a></li>
+			<div id="underline">
+			</div>
+		</ul>
+		<script type="text/javascript">
+			for (var i=0;i<4;i++) {
+//				document.querySelectorAll("#nav li")[i].setAttribute("num",i);
+				document.querySelectorAll("#nav li")[i].addEventListener("click",function(e){
+					var left = e.target.offsetLeft;
+					document.querySelector("#underline").style.left = left+"px";
+				})
+			}
+		</script>
+	</body>
+</html>
