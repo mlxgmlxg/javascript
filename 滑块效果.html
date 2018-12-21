@@ -50,8 +50,8 @@
 		<script type="text/javascript">
 			for (var i=0;i<4;i++) {
 //				document.querySelectorAll("#nav li")[i].setAttribute("num",i);
-				document.querySelectorAll("#nav li")[i].addEventListener("click",function(e){
-					var left = e.target.offsetLeft;
+				document.querySelectorAll("#nav li")[i].addEventListener("click",function(event){
+					var left = event.target.offsetLeft;
 					document.querySelector("#underline").style.left = left+"px";
 				})
 			}
