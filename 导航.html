@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			.nav {width: 720px;height: 80px;margin: 0 auto;transform: translateY(30vh);}
+			ul li {width: 120px;background: #0000FF;display: block;float: left;text-align: center;}
+			ul li a {text-align: center;padding: 10px 18px;font-size: 16px;color: #fff;line-height: 80px;background: #74777B;border-radius: 20px;}
+			/*ul li a:hover {background: red;color: #000;}*/
+			
+		</style>
+		<header>
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="http://baidu.com">新年快乐</a>
+					</li>
+					<li>
+						<a href="http://baidu.com">新年快乐</a>
+					</li>
+					<li>
+						<a href="http://baidu.com">新年快乐</a>
+					</li>
+					<li>
+						<a href="http://baidu.com">新年快乐</a>
+					</li>
+					<li>
+						<a href="http://baidu.com">新年快乐</a>
+					</li>
+					<li>
+						<a href="http://baidu.com">新年快乐</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<script type="text/javascript">
+			$(".nav ul li a").on("click",function(e){
+				e.preventDefault()
+				$(this).parent("li").attr("sel","sel")
+				$(this).css({"background": "red","color": "#000"})
+			}).on("mouseenter",function(){
+				$(this).css({"background": "red","color": "#000"})
+			}).on("mouseleave",function(){
+				if($(this).parent("li").attr("sel") !== "sel") {
+					$(this).css({"background": "#74777B","color": "#fff"})
+				}
+			})
+		</script>
+	</body>
+</html>
