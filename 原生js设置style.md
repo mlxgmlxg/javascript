@@ -1,4 +1,4 @@
-##原生js
+## 原生js
 
 ```javascipt
 
@@ -9,7 +9,7 @@ xymdiv.style.width = "100%";
 xymdiv.offsetLeft
 
 ```
-##jq写法
+## jq写法
 
 ```javascipt
 
