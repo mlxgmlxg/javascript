@@ -1,12 +1,23 @@
+##原生js
+
 ```javascipt
 
 var xymdiv = document.getElementById("xywebad");
 xycdiv.style.visibility = "hidden"
 xyrdiv.style.width = xywidth;
-xyrdiv.style.height = xyheight;
-xyrdiv.style.background = "none";
 xymdiv.style.width = "100%";
-xymdiv.style.height = "96%";
-xymdiv.style.background = "#EEE";
+xymdiv.offsetLeft
+
+```
+##jq写法
+
+```javascipt
+
+$(".abc").css({"color":"#ddd","font-size":"18px"})
+$(".abc").css("color","#fff")
+$(".abc").animate({"height":"100px","scrollTop":500},300)
+$(".abc").scrolltop(300)
+$(".abc").outerHeight()
+$(".abc").scrollTop()
 
 ```
