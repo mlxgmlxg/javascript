@@ -19,5 +19,7 @@ $(".abc").animate({"height":"100px","scrollTop":500},300)
 $(".abc").scrolltop(300)
 $(".abc").outerHeight()
 $(".abc").scrollTop()
+$(".abc).slideUp(300)
+$(".abc).hide(300)
 
 ```
