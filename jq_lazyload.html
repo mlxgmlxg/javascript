@@ -26,6 +26,7 @@
 		<script type="text/javascript">
 		  $(function() {
 		      $(".container img").lazyload({
+		      	container: $(".container"), //你可以将插件用在可滚动容器的图片上, 例如带滚动条的 DIV 元素
 		      	effect: "fadeIn", //淡入效果
 		      	threshold : 800,  //设置 threshold 为 800 令图片在距离屏幕 800 像素时提前加载.
 		      	skip_invisible: false //可能在你的页面上埋藏可很多隐藏的图片. 比如插件用在对列表的筛选, 
