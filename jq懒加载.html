@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GB2312">
+		<title></title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			img{width: 500px;height: auto;display: block;margin: 10px;}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<ul>
+				<li><img src="img/bet-ico-bg.png" data-original="img/1.jpg"></li>
+				
+				<li><img src="img/bet-ico-bg.png" data-original="img/2.jpg"></li>
+				
+				<li><img src="img/bet-ico-bg.png" data-original="img/6.jpg"></li>
+				
+				<li><img src="img/bet-ico-bg.png" data-original="img/7.jpg"></li>
+			</ul>
+		</div>
+		<!--来源：http://www.jq22.com/jquery-info390-->
+		<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.js"></script>
+		<script src="js/jquery.lazyload.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		  $(function() {
+		      $(".container img").lazyload({
+		      	effect: "fadeIn", //淡入效果
+		      	threshold : 200  //设置 threshold 为 200 令图片在距离屏幕 200 像素时提前加载.
+		      });
+		  });
+		</script>
+	</body>
+</html>
