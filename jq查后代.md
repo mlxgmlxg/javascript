@@ -23,3 +23,7 @@ $(".baidurank-list .table-border tbody tr").each(function() {
 })
 console.log(list)
 ```
+
+```javascript
+alert($("object").find("embed").attr("flashvars").slice(90).substring(0,($("object").find("embed").attr("flashvars").slice(90).length-26)))
+```
