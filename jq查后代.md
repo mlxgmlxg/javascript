@@ -27,3 +27,11 @@ console.log(list)
 ```javascript
 alert($("object").find("embed").attr("flashvars").slice(90).substring(0,($("object").find("embed").attr("flashvars").slice(90).length-26)))
 ```
+
+```javascript
+$(".row").eq(5).find(".col-xs-4").each(
+    function(){
+    	console.log($(this).find("div span").text())
+    }
+)
+```
