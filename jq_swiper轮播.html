@@ -101,13 +101,13 @@
 				},
 				on: {//Swiper Animate
 						init: function(){
-				        swiperAnimateCache(this);
-				        swiperAnimate(this); 
-			        }, 
-			        slideChangeTransitionEnd: function(){ 
+					        swiperAnimateCache(this);
+					        swiperAnimate(this); 
+		        	}, 
+	        		slideChangeTransitionEnd: function(){ 
 				        swiperAnimate(this);
 			        },
-			   },
+			    },
 			});
 			swiper1.el.onmouseover = function(){//悬浮暂停
 			  swiper1.autoplay.stop();
