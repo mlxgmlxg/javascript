@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/clipboard.js/1.5.13/clipboard.js"></script>
+	</head>
+	<body>
+		    <input id="foo" value="这里是内容">
+		    <button class="btn" data-clipboard-target="#foo">点击复制</button>
+		    <script>
+		    var clipboard = new Clipboard('.btn');
+		    clipboard.on('success', function(e) {
+		            alert("复制成功!");
+		             e.clearSelection();
+		    });
+		    clipboard.on('error', function(e) {
+		              alert("复制失败!");
+		    });
+		    </script>
+		    <!--https://clipboardjs.com/-->
+	</body>
+</html>
