@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p><span id="djs">5</span>秒</p>
+		<script type="text/javascript">
+			var timer = setInterval(countDown,1000);
+			a = 5;
+			function countDown(){
+				a--;
+				document.getElementById("djs").innerHTML=a;
+				if(a<1){
+					clearInterval(timer);
+				}
+			}
+		</script>
+		
+		
+		<p><span id="time">10</span>秒</p>
+		<script type="text/javascript">
+			let ttt = document.querySelector("#time")
+			
+			let time = {
+				count:10
+			}
+			function count(t){
+				t.count -= 1;
+				if(t.count<0){
+					return false;
+				}
+				ttt.innerHTML = t.count
+			}
+			setInterval(function(){
+				count(time)
+			},1000)
+			
+			
+		</script>
+	</body>
+</html>

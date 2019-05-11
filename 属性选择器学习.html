@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>属性选择器学习</title>
+
+<script language="javascript" type="text/javascript">
+
+
+//使用jquery加载事件
+
+$(document).ready(function (){
+
+
+//<input id="btn0" type="button" value="利用jquery对象实现 修改表单中可见的文本域的值  $('input[type=text]:enabled')" />
+
+
+$("#btn0").click(function (){
+
+
+//当点击按钮后，设置id=two的div的背景颜色是绿色
+
+$("input[type=text]:enabled").each(function(index,domEle){
+
+
+//domEle.value="xxxxx";
+
+$(domEle).val("xxxxxxxx");
+
+
+});
+
+
+});
+
+
+//<input id="btn1" type="button" value="利用jquery对象实现 修改表单中不可修改的文本域的值  $('input[type=text]:disabled')" />
+
+
+$("#btn1").click(function (){
+
+
+//当点击按钮后，设置id=two的div的背景颜色是绿色
+
+$("input[type=text]:disabled").each(function(index,domEle){
+
+
+//domEle.value="xxxxx";
+
+$(domEle).val("xxxxxxxx");
+
+
+});
+
+
+});
+
+
+//<input id="btn2" type="button" value="利用jquery对象实现 获取选中的复选框的个数 $('input[type=checkbox]:checked')" />
+
+
+$("#btn2").click(function (){
+
+
+//当点击按钮后，设置id=two的div的背景颜色是绿色
+
+alert($("input[type=checkbox]:checked").length);
+
+
+/*
+
+$("input[type=checkbox]:checked").each(function(index,domEle){
+
+
+//alert(domEle.value);
+
+//alert(this.value);
+
+//alert($(this).val());
+
+});
+
+
+*/
+
+
+});
+
+
+
+//<input id="btn3" type="button" value="利用jquery对象实现 获取选中的下拉菜单的内容  $('select option:selected')" />
+
+$("#btn3").click(function (){
+
+
+//当点击按钮后，设置id=two的div的背景颜色是绿色
+
+$("select option:selected").each(function(index,domEle){
+
+
+//domEle.value="xxxxx";
+
+alert($(domEle).text());
+
+
+});
+
+});
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<form method="post" action="">
+
+<input type="text" value="可见元素1"  />
+
+<input type="text" value="不可见元素1" disabled="disabled"  />
+
+<input type="text" value="可见元素2"  />
+
+<input type="text" value="不可见元素2"  disabled="disabled" /><br>
+
+<input type="checkbox" value="美女" />美女
+
+<input type="checkbox" value="美男" />美男
+
+<input type="checkbox" value="大爷" />大爷
+
+<input type="checkbox" value="大妈" />大妈
+
+<br>
+
+<input type="radio" value="男" />男
+
+<input type="radio" value="女" />女
+
+<br>
+
+<select id="zhiwei" size="5" multiple="multiple">
+
+   <option>PHP开发工程师</option>
+
+   <option>数据库管理员</option>
+
+   <option>系统分析师</option>
+
+   <option>保安</option>
+
+</select>
+
+
+<select id="xueli">
+
+
+   <option>大专</option>
+
+   <option>中专</option>
+
+   <option>小学</option>
+
+
+</select>
+
+</form>
+
+<div style="clear:both;">
+
+
+<input id="btn0" type="button" value="利用jquery对象实现 修改表单中可修改的文本域的值  $('input[type=text]:enabled')" /><br>
+
+<input id="btn1" type="button" value="利用jquery对象实现 修改表单中不可修改的文本域的值  $('input[type=text]:disabled')" /><br>
+
+<input id="btn2" type="button" value="利用jquery对象实现 获取选中的复选框的个数 $('input[type=checkbox]:checked')" /><br>
+
+<input id="btn3" type="button" value="利用jquery对象实现 获取选中的下拉菜单的内容  $('select option:selected')" /><br>
+
+
+
+</div>
+
+</body>
+
+</html>

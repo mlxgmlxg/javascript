@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GBK">
+		<title></title>
+		<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+	</head>
+	<body>
+		<style type="text/css">
+			.fa{color: red;font-size: 58px;}
+		</style>
+		<i class="fa"></i>
+		<script type="text/javascript">
+			let hg = document.querySelector("i")
+			let hour = ["fa-hourglass-1","fa-hourglass-2","fa-hourglass-3",]
+			function addClass(c){
+				hg.classList.remove(hour[0],hour[1],hour[2])
+				hg.classList.add(c)
+			}
+			function setT(t,s){
+				setTimeout(function(){
+					addClass(hour[t])
+				},s)
+			}
+			function run(){
+				setT(0,0)
+				setT(1,1000)
+				setT(2,2000)
+				setInterval(run,3000)
+			}
+			if(window.onblur){
+				
+			}else{
+				run()
+			}
+		</script>
+	</body>
+</html>

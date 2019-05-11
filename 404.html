@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>对不起，404 页面未找到</title>
+<style type="text/css">
+body,td,th {
+color: #FFFFFF;
+}
+body {
+background-color: #0099CC;
+}
+.STYLE7 {
+font-size: 24px;
+font-family: "微软雅黑";
+}
+.STYLE9 {font-size: 16px}
+.STYLE12 {
+font-size: 100px;
+font-family: "微软雅黑";
+}
+a {
+color: #ffd2d2;
+}
+</style>
+</head>
+<body>
+<span class="STYLE12">&nbsp;:(</span>
+<p class="STYLE7"> 　　对不起，您输入的网址我们没有找到。<br />
+　　<span id="djss">5</span>秒后为您跳转到首页，您可以在首页试着找找您所需要的信息。
+</p>
+<p class="STYLE7">
+　　<span class="STYLE9">如果您想了解更多信息，<a href="/">返回首页</a></span>
+</p>
+<script type="text/javascript">
+var timer = setInterval(cTime,1000);
+a = 5;
+function cTime(){
+	a--;
+	document.getElementById("djss").innerHTML = a
+	if (a < 1){
+		clearInterval(timer);
+		location.href = "/";
+	}
+}
+</script>
+</body>
+</html>
