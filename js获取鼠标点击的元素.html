@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body onmousedown="show_element(event)">
+		<h1>this is a heading</h1>
+	    <p>这是段落</p>
+	    <p>这又是一个段落</p>
+	    <img src="1.jpg"/>
+		<script type="text/javascript">
+		    function show_element(e){
+		        if(!e){
+		          var e = window.event;
+		        }
+		        //获取事件点击元素
+		        var targ = e.target;
+		        //获取元素名称
+		        var tname = targ.tagName;
+		        alert(tname);
+		    }
+	    </script>
+	</body>
+</html>
