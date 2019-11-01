@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>layUI</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="js/laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<input type="text" name="" id="date" placeholder="年/月/日" />
+		<script type="text/javascript">
+			laydate.render({
+			  elem: '#date',
+			  theme: '#393D49',
+			  value: new Date()
+			});
+			// https://www.layui.com/doc/modules/laydate.html
+			// 说明文档
+		</script>
+	</body>
+</html>

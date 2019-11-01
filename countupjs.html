@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="js/jquery.countup.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			#num{font-size: 150px;letter-spacing: 20px;}
+		</style>
+		<h1 id="num"></h1>
+		<script type="text/javascript">
+			var options = {
+				useEasing: true,
+				useGrouping: true,
+				separator: ',',
+				decimal: '.'
+			};
+			var startVal = Math.random()*1e5+3e3;
+			var money = new CountUp('num', startVal, 999999999, 0, 2e6, options)
+			money.start()
+		</script>
+	</body>
+</html>

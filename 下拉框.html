@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			.tm-select {
+			    width: 280px;
+			    height: 44px;
+			    float: left;
+			    line-height: 44px;
+			    background: #3A3835;
+			    color: #E5E5E5;
+			    text-align: center;
+			    border-radius: 2px;
+			}
+			.select {
+				position: relative;
+				display: block;
+				width: 100%;
+				max-width: 325px;
+				color: #cccccc;
+				vertical-align: middle;
+				user-select: none;
+			}
+			
+			.select .placeholder {
+				position: relative;
+				display: block;
+				z-index: 1;
+				border-radius: 2px;
+				cursor: pointer;
+			}
+			
+			.select .placeholder:hover {
+				background: #34383c;
+			}
+			
+			.select .placeholder:after {
+				position: absolute;
+				right: 1em;
+				top: 50%;
+				transform: translateY(-50%);
+				font-family: "FontAwesome";
+				content: "\f078";
+				z-index: 10;
+			}
+			
+			.select.is-open .placeholder:after {
+				content: "\f077";
+			}
+			
+			.select.is-open ul {
+				display: block;
+			}
+			
+			.select.select--white .placeholder {
+				background: #fff;
+				color: #999;
+			}
+			
+			.select.select--white .placeholder:hover {
+				background: #fafafa;
+			}
+			
+			.select ul {
+				display: none;
+				position: absolute;
+				overflow: hidden;
+				overflow-y: auto;
+				width: 100%;
+				background: #fff;
+				border-radius: 2px;
+				top: 100%;
+				left: 0;
+				list-style: none;
+				margin: 5px 0 0 0;
+				padding: 0;
+				z-index: 100;
+				max-height: 150px;
+			}
+			
+			.select ul li {
+				display: block;
+				text-align: center;
+				color: #666;
+				font-size: 14px;
+				cursor: pointer;
+			}
+			
+			.select ul li:hover {
+				background: #4ebbf0;
+				color: #fff;
+			}
+		</style>
+		<div class="select tm-select">
+			<span class="placeholder">1</span>
+			<ul>
+				<li data-value="">666</li>
+				<li data-value="">1</li>
+				<li data-value="">2</li>
+				<li data-value="">3</li>
+				<li data-value="">4</li>
+				<li data-value="">5</li>
+			</ul>
+			<input type="hidden" name="changeme">
+		</div>
+		<script type="text/javascript">
+			$('.select').on('click','.placeholder',function(){
+			  var parent = $(this).closest('.select');
+			  if ( ! parent.hasClass('is-open')){
+				parent.addClass('is-open');
+				$('.select.is-open').not(parent).removeClass('is-open');
+			  }else{
+				parent.removeClass('is-open');
+			  }
+			}).on('click','ul>li',function(){
+			  var parent = $(this).closest('.select');
+			  parent.removeClass('is-open').find('.placeholder').text( $(this).text() );
+			  parent.find('input[type=hidden]').attr('value', $(this).attr('data-value') );
+			});
+		</script>
+	</body>
+</html>

